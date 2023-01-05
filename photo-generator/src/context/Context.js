@@ -9,6 +9,8 @@ const ContextProvider = (props) => {
 
 	const [loading, setLoading] = useState(true);
 
+	const [defaultSearch, setDefaultSearch] = useState('');
+
 	const runSearch = (query) => {
 		axios
 			.get(
@@ -16,7 +18,7 @@ const ContextProvider = (props) => {
 			)
 			.then((response) => {
 				setImages(response.data.photos);
-
+				setDefaultSearch(query);
 				setLoading(false);
 			})
 			.catch((error) => {
@@ -25,7 +27,7 @@ const ContextProvider = (props) => {
 	};
 
 	return (
-		<Context.Provider value={{ images, loading, runSearch }}>
+		<Context.Provider value={{ images, loading, runSearch, defaultSearch }}>
 			{props.children}
 		</Context.Provider>
 	);

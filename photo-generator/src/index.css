@@ -14,3 +14,7 @@
 	width: 100%;
 	max-width: 215px;
 }
+
+.subsearch {
+	cursor: pointer;
+}

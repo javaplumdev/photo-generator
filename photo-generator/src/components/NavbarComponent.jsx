@@ -39,7 +39,8 @@ const NavbarComponent = () => {
 						return (
 							<small
 								key={item.id}
-								className="m-1 bg-dark text-light px-3 rounded"
+								className="subsearch m-1 bg-dark text-light px-3 rounded"
+								onClick={() => runSearch(item.name)}
 							>
 								{item.name}
 							</small>
