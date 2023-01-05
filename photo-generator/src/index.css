@@ -3,3 +3,14 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+
+.navbar {
+	max-width: 500px;
+}
+
+.images {
+	object-fit: cover;
+	height: 200px;
+	width: 100%;
+	max-width: 215px;
+}
